@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+    border: 2px solid;
+}
+
+th{
+    font-size: x-large;
+    border-bottom: 2px solid white;
+}
+
+table td + td {
+    border-left:2px solid pink; 
+}
+
+td{
+    text-align: center;
+}
