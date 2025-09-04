@@ -21,5 +21,35 @@
         <tbody id="tableBody">
         </tbody>
     </table>
+    <dialog id="mainDialog">
+        <h2>New Book Addition</h2>
+        <form id="modalForm">
+            <div class="modalInput">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="modalInput">
+                <label for="author">Author:</label>
+                <input type="text" id="author" required>
+            </div>
+            <div class="modalInput">
+                <label for="pages">Pages:</label>
+                <input type="number" id="pages" min="20" max="2000"required>
+            </div>
+            <div class="modalInput">
+                <label for="read">Read?:</label>
+                <select id="read" name="read">
+                    <option value="Yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </form>
+        <button id="addBookButton" class="modalButton">Add Book</button>
+        <button id="closeButton" class="modalButton">Close Dialog</button>
+    </dialog>
+    <div id="buttonDiv">
+
+        <button id="showButton">Add book</button>
+    </div>
 </body>
 </html>

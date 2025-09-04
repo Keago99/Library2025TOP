@@ -3,6 +3,37 @@
     font-size: x-large;
 }
 
+#buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showButton{
+    margin-top: 50px;
+    height: 75px;
+    width: 150px;
+    background-color: blueviolet;
+    border-radius: 15px;
+}
+.modalInput{
+    margin-top: 5px;
+}
+
+.modalButton{
+    margin-top: 10px;
+}
+
+label{
+    text-align: left;
+    width: 40%;
+}
+
+input{
+    display: flex;
+    justify-content: right;
+    width: 60%;
+}
 
 table{
     width: 100%;

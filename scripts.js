@@ -1,6 +1,10 @@
 const library = [];
 
-let tableBody = document.getElementById("tableBody");
+const tableBody = document.getElementById("tableBody");
+const dialog = document.getElementById("mainDialog");
+const showButton = document.getElementById("showButton");
+const closeButon = document.getElementById("closeButton");
+const modalForm = document.getElementById("modalForm");
 
 function Book(title, author, pages, read){
     this.title = title;
@@ -8,6 +12,22 @@ function Book(title, author, pages, read){
     this.pages = pages;
     this.read = read;
 }
+
+addBookButton.addEventListener("click", () => {
+    addBookModal();
+    modalForm.reset();
+    updateTable();
+    dialog.close();
+})
+
+showButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+closeButton.addEventListener("click", () =>{
+    dialog.close();
+});
+
 
 
 function addBookToLibrary(title, author, pages, read){
@@ -49,7 +69,20 @@ function clearTable(){
     tableBody.innerHTML = "";
 }
 
+function addBookModal(){
+    let modalTitle = document.getElementById("title").value;
+    let modalAuthor = document.getElementById("author").value;
+    let modalPages = document.getElementById("pages").value;
+    let modalRead = document.getElementById("read").value;
+
+    let newBook = new Book(modalTitle,modalAuthor,modalPages,modalRead);
+    library.push(newBook);
+    updateTable();
+
+}
+
 addBookToLibrary("Lord of the Rings", "Ringy dude", 300, "Yes");
+addBookToLibrary("Hitchikers Guide to the Galaxy", "Doughlass Adams", 160, "Yes");
 
 console.log(library);
 updateTable();
